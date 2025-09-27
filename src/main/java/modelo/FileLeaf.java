@@ -20,10 +20,4 @@ public class FileLeaf extends FileComponent{
     public int getSize() {
         return size;
     }
-
-    @Override
-    public void mostrarContenido(String indent) {
-        System.out.println(indent + "- " + nombre + " (" + size + " KB)");
-    }
-    
 }

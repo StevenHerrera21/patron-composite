@@ -27,23 +27,15 @@ public class FolderComposite extends FileComponent{
         return total;
     }
     
-    public void add(FileComponent figura){
-        this.hijos.add(figura);
+    public void add(FileComponent component){
+        this.hijos.add(component);
     }
     
-    public void delete(FileComponent figura){
-        this.hijos.remove(figura);
+    public void delete(FileComponent component){
+        this.hijos.remove(component);
     }
-
-    public List<FileComponent> getHijos() {
-        return hijos;
-    }
-
+    
     @Override
-    public void mostrarContenido(String indent) {
-        System.out.println(indent  +" + Carpeta: " + nombre + " (" + getSize() + " KB)");
-        for (FileComponent hijo : hijos) {
-            hijo.mostrarContenido(indent + "    ");
-        }
-    }
+    public List<FileComponent> getHijos() { return hijos; }
+
 }
