@@ -15,6 +15,10 @@ import modelo.FolderComposite;
 public class FileSystemController {
     private FolderComposite root;
     
+    public FileSystemController(FolderComposite root) {
+        this.root = root;
+    }
+    
     public void addFile(FolderComposite folder, String name, int size) {
         FileLeaf file = new FileLeaf(name, size);
         folder.add(file);
@@ -26,5 +30,9 @@ public class FileSystemController {
     
     public void remove(FolderComposite parent, FileComponent component) {
         parent.delete(component);
+    }
+    
+    public FolderComposite getRoot() {
+        return root;
     }
 }

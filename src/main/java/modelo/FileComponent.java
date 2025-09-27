@@ -4,6 +4,9 @@
  */
 package modelo;
 
+import java.util.Collections;
+import java.util.List;
+
 /**
  *
  * @author stev1
@@ -18,4 +21,7 @@ public abstract class FileComponent {
     public String getName() { return nombre; }
     public abstract int getSize();
     public abstract void mostrarContenido(String indent);
+    public List<FileComponent> getHijos() {
+        return Collections.emptyList();
+    }
 }
